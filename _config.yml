@@ -5,15 +5,13 @@ markdown:  kramdown
 permalink: /:title
 plugins:   [jekyll-sitemap, jekyll-feed,  jekyll-seo-tag]
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+# Customise atom feed settings
 
-title:		   "Portfolio Jekyll Theme"
-description: "Powered by Jekyll and GitHub Pages"
-author:      "Paul Le"
+title:       "Jingqi Lu | Portfolio"
+description: "MUSA Student | Mobility | Spatial Justice | Network Science | Agent Modelling"
+author:      "Jingqi Lu"
 
 collections:
   projects:
     output: true
     permalink: /:collection/:title
-    # sort_by: date
-    # sort_reverse: true
