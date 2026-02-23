@@ -1,10 +1,17 @@
 ---
 layout: post
-title: 'Project One'
+title: 'Philadelphia Housing Price Prediction Model'
 thumbnail: /assets/img/projects/proj-1/thumbnail.jpg
 ---
-Mauris velit metus, tempor gravida nulla eget, auctor accumsan tellus. Curabitur volutpat sed dolor quis tempus. In scelerisque aliquam felis at tincidunt. Proin non augue fringilla, [pretium justo vitae](#), maximus dui. Nunc ipsum nisi, fermentum sit amet volutpat cursus, sodales ac nisl. Quisque nec tellus sem. Cras pharetra felis non quam mollis, nec efficitur lectus aliquet. Maecenas ipsum felis, eleifend nec [semper venenatis](#), consequat ut nunc. Donec est augue, facilisis quis placerat sed, imperdiet sit amet neque. Maecenas nec risus metus. Nunc non condimentum ipsum. Phasellus consectetur dapibus massa, convallis iaculis nisi vestibulum id. Phasellus et fringilla augue. Donec consequat dui ut rutrum elementum. Aenean nisi arcu, ornare eu lacus vel, faucibus tempor tortor.
 
-{% include image.html url="http://www.gratisography.com" image="projects/proj-1/dog.jpg" %}
+Can we predict home sale prices in Philadelphia with enough accuracy to be useful for policy? This project builds a spatial hedonic regression model trained on real transaction data, incorporating not just property characteristics but the neighborhood context that shapes value in ways traditional models often miss.
 
-{% include image.html url="http://www.gratisography.com" image="projects/proj-1/wall.jpg" %}
+The model accounts for spatial autocorrelation — the fact that nearby homes tend to sell for similar prices — using spatial lag variables and cross-validation strategies designed for geographic data. I tested multiple model specifications and evaluated performance across different neighborhoods to understand where predictions hold up and where they break down.
+
+{% include image.html url="https://lluluciano0505.github.io/Jingqi_Data_Policy_Portfolio/assignments/midterm/appendix_nolog.html" image="projects/proj-1/thumbnail.jpg" %}
+
+One of the key findings was that price prediction errors were not randomly distributed — they clustered spatially, pointing to neighborhood-level dynamics that the model's features couldn't fully capture. That kind of structured residual is itself informative for policy: it tells you where official valuations may be systematically off.
+
+[View Full Analysis →](https://lluluciano0505.github.io/Jingqi_Data_Policy_Portfolio/assignments/midterm/appendix_nolog.html)
+
+**Tools:** R · tidyverse · sf · spdep · ggplot2
