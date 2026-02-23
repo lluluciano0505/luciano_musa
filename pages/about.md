@@ -21,7 +21,7 @@ Right now I'm collaborating with [Henning Larsen](https://henninglarsen.com/) in
 
 ## Background
 
-I completed my BA in Geography with Social Data Science at [University College London](https://www.ucl.ac.uk/), where I developed a foundation in spatial econometrics, cartography, and machine learning for social science. During my final year I did an Erasmus exchange at the **University of Amsterdam**, focusing on migration dynamics and political geography — which pushed me to think more carefully about the *politics* embedded in spatial data, not just the methods.
+I completed my BA in Geography with Social Data Science at [University College London](https://www.ucl.ac.uk/), where I developed a foundation in spatial econometrics, cartography, and machine learning for social science. During my final year I did an Erasmus exchange at the University of Amsterdam, focusing on migration dynamics and political geography — which pushed me to think more carefully about the politics and identity embedded in spatial data, not just the methods.
 
 Before coming to Penn, I worked as a data analysis assistant at Hisense, cleaning and visualizing sales datasets, and spent a summer as an IELTS teaching assistant — which, as it turns out, taught me a lot about explaining complex ideas clearly. A skill that comes in handy more often than you'd think in data science.
 
