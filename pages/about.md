@@ -7,13 +7,13 @@ permalink: /about
 
 # Jingqi Lu
 
-Hi, I'm Jingqi — a graduate student in [Urban Spatial Analytics (MUSA)](https://www.design.upenn.edu/musa) at the University of Pennsylvania, where I'm maintaining a 4.0 GPA and spending most of my time thinking about cities, data, and the space between them.
+Hi, I'm Jingqi — a graduate student in [Urban Spatial Analytics (MUSA)](https://www.design.upenn.edu/urban-spatial-analytics) at the University of Pennsylvania, where I'm maintaining a 4.0 GPA and spending most of my time thinking about cities, data, and the space between them.
 
 I grew up in China, studied in London, did an exchange in Amsterdam, and now live in Philadelphia. Moving between cities has made me genuinely curious about how they work — why some neighborhoods feel connected and others don't, who gets to move freely and who doesn't, and how the patterns we see on a map reflect decisions made (or not made) decades ago. That curiosity is what pulled me toward urban data science.
 
 ## What I Work On
 
-My research interests sit at the intersection of **spatial data science**, **agent-based modelling**, and **urban equity**. I'm particularly drawn to questions about mobility and access — how people navigate cities, what barriers shape those movements, and how we can use computation to surface inequalities that are easy to miss in aggregate statistics.
+My research interests sit at the intersection of spatial data science, agent modelling, and urban equity. I'm particularly drawn to questions about mobility and access — how people navigate cities, what barriers shape those movements, and how we can use computation to surface inequalities that are easy to miss in aggregate statistics.
 
 On the technical side, I work extensively with Python (pandas, geopandas, scikit-learn), R, SQL, and ArcGIS. I also work with deep learning methods (CNN, Mask R-CNN, U-Net/PSPNet) for spatial imagery analysis, and I've been exploring how large language models can augment geospatial workflows — extracting meaning from unstructured urban data that traditional methods struggle with.
 
