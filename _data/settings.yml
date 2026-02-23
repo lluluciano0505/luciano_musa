@@ -5,17 +5,19 @@ logo: '/assets/img/musa-logo.png'
 
 intro_title: Spatial Data & AI for Smarter Cities
 intro_text: |
-  I'm Jingqi Lu, an MS Urban Spatial Analytics student at the University of 
-  Pennsylvania, with a background in Geography and Social Data Science from UCL. 
-  I work at the intersection of spatial analysis, agent-based modelling, and AI — 
-  using data to understand how cities move, divide, and evolve.
+  Urban Spatial Researcher | MS Candidate at UPenn
+Specialized in translating complex urban phenomena into actionable spatial insights. 
+With a background from UCL in Social Data Science, I focus on agent-based modeling (ABM) 
+and mobility analytics to understand how infrastructure and policy influence urban equity 
+and flow. I bridge the gap between geographic theory and computational execution to solve 
+"wicked" urban problems.
 
 resume: '/assets/files/CV_Jingqi.pdf'
 resume_link_title: Download CV
 
 menu:
 - {name: 'Projects', url: ' '}
-- {name: 'Blog',     url: 'blog'}
+- {name: 'Blog and Creation',     url: 'blog'}
 - {name: 'About',    url: 'about'}
 - {name: 'Contact',  url: 'contact'}
 
