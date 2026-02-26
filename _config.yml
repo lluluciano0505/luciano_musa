@@ -8,7 +8,7 @@ plugins:   [jekyll-sitemap, jekyll-feed,  jekyll-seo-tag]
 # Customise atom feed settings
 
 title:       "Jingqi Lu | Portfolio"
-description: "MUSA Student | Mobility | Spatial Justice | Network Science | Agent Modelling"
+description: "MUSA Student | Mobility | Spatial Justice | Network Science | Agentic Modelling"
 author:      "Jingqi Lu"
 
 collections:
