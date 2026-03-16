@@ -6,14 +6,14 @@
       <div class="project-thumbnail-wrapper">
         <img class="project-thumbnail" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
       </div>
-      {% if project.tagline %}
-      <div class="project-tagline">{{ project.tagline }}</div>
-      {% endif %}
-      <div class="project-label">
-        {{ project.title }}
-      </div>
-      <div class="project-link-arrow">
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      <div class="project-card-body">
+        <div class="project-label">{{ project.title }}</div>
+        {% if project.tagline %}
+        <div class="project-tagline">{{ project.tagline }}</div>
+        {% endif %}
+        <div class="project-link-arrow">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
       </div>
     </a>
   {% endfor %}
