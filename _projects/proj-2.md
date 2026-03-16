@@ -2,7 +2,7 @@
 layout: post
 title: 'Philadelphia Fire Alarms Analysis'
 thumbnail: /assets/img/projects/proj-2/thumbnail.png
-tagline: 'Where will the next fire alarm happen — and can we get there first? Mapping urban fire risk to drive proactive inspection policy.'
+tagline: 'Mapping urban fire risk across Philadelphia to drive proactive inspection policy — identifying high-risk properties before alarms happen.'
 ---
 
 Where do fire alarms happen most in Philadelphia, and can we predict where they're likely to happen next? This final project builds on the full arc of the course — combining spatial analysis, predictive modeling, and policy thinking — to examine fire alarm patterns across the city and what they reveal about urban risk.

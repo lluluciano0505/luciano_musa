@@ -2,7 +2,7 @@
 layout: post
 title: 'The Urban Asset Classifier'
 thumbnail: /assets/img/projects/proj-5/proj5.png
-tagline: 'Thousands of unclassified project files, sorted manually or not at all. An LLM-powered pipeline that turns raw folders into structured, queryable archives.'
+tagline: 'An LLM-powered pipeline that classifies thousands of unstructured urban project files into structured, queryable archives — automatically.'
 ---
 
 Large-scale urban projects — architecture, GIS, infrastructure — generate thousands of files over their lifetimes: CAD drawings, PDFs, shapefiles, financial spreadsheets. In practice, almost none of them are systematically organized. They pile up in labyrinthine directory trees, manually sorted (badly) or not sorted at all. When someone needs to audit a project archive, assess data sensitivity, or answer a basic question like *"what do we have from the design development phase?"*, the answer is usually: hours of manual triage.

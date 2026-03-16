@@ -2,7 +2,7 @@
 layout: post
 title: 'LSTM Spatial Flow Prediction: Modeling Urban Mobility with Deep Learning'
 thumbnail: /assets/img/projects/proj-4/thumbnail.png
-tagline: 'Can a deep learning model learn how a city breathes? Using LSTM networks to predict urban flow patterns across space and time.'
+tagline: 'Using LSTM networks to predict urban flow patterns across space and time — modeling the rhythm of a city at 500m resolution.'
 ---
 
 Can a deep learning model learn how a city breathes — the ebb and flow of people moving through urban space across the course of a day? This project builds and evaluates an LSTM-based sequence model for predicting next-step mobility flows across a metropolitan grid, using the [YJMob100K dataset](https://www.nature.com/articles/s41597-022-01754-0), an anonymized mobile phone trajectory dataset covering a large Japanese city at 500m × 500m spatial resolution and 30-minute temporal intervals.
