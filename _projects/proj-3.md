@@ -2,7 +2,7 @@
 layout: post
 title: 'Geolife Daily Mobility: Reconstructing Urban Movement from GPS Trajectories'
 thumbnail: /assets/img/projects/proj-3/thumbnail.png
-tagline: 'GPS trajectory analysis · Python · Urban mobility pattern reconstruction'
+tagline: 'How do people actually move through a city? Reconstructing daily mobility patterns from thousands of real GPS trajectories in Beijing.'
 ---
 
 How do people actually move through a city — and what patterns emerge when you look at thousands of days of real GPS data? This project uses the [Microsoft Research Geolife dataset](https://www.microsoft.com/en-us/research/publication/geolife-gps-trajectory-dataset-user-guide/), a collection of high-resolution GPS trajectories from 182 users over several years in Beijing, to reconstruct daily home-based mobility patterns and examine the structure of urban movement at the individual level.
