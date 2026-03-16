@@ -314,6 +314,15 @@ h2::after {
   transition: margin-left 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+.project-tagline {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.02em;
+}
+
 .project-label {
   display: block;
   font-size: 1.2rem;

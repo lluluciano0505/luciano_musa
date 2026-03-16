@@ -6,6 +6,9 @@
       <div class="project-thumbnail-wrapper">
         <img class="project-thumbnail" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
       </div>
+      {% if project.tagline %}
+      <div class="project-tagline">{{ project.tagline }}</div>
+      {% endif %}
       <div class="project-label">
         {{ project.title }}
       </div>

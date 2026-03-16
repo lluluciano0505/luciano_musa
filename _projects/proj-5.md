@@ -2,6 +2,7 @@
 layout: post
 title: 'The Urban Asset Classifier'
 thumbnail: /assets/img/projects/proj-5/proj5.png
+tagline: 'LLM + RAG pipeline · Python · AI-powered urban file classification'
 ---
 
 Large-scale urban projects — architecture, GIS, infrastructure — generate thousands of files over their lifetimes: CAD drawings, PDFs, shapefiles, financial spreadsheets. In practice, almost none of them are systematically organized. They pile up in labyrinthine directory trees, manually sorted (badly) or not sorted at all. When someone needs to audit a project archive, assess data sensitivity, or answer a basic question like *"what do we have from the design development phase?"*, the answer is usually: hours of manual triage.

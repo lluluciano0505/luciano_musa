@@ -2,6 +2,7 @@
 layout: post
 title: 'Philadelphia Fire Alarms Analysis'
 thumbnail: /assets/img/projects/proj-2/thumbnail.png
+tagline: 'Predictive risk mapping with spatial ML · R · Policy recommendation'
 ---
 
 Where do fire alarms happen most in Philadelphia, and can we predict where they're likely to happen next? This final project builds on the full arc of the course — combining spatial analysis, predictive modeling, and policy thinking — to examine fire alarm patterns across the city and what they reveal about urban risk.
