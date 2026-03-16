@@ -2,7 +2,7 @@
 layout: post
 title: 'Philadelphia Housing Price Prediction Model'
 thumbnail: /assets/img/projects/proj-1/thumbnail.png
-tagline: 'Predicting home sale prices in Philadelphia using spatial hedonic regression — capturing neighborhood context and spatial autocorrelation that standard models miss.'
+tagline: 'Predicting home sale prices in Philadelphia using spatial hedonic regression by integrating demographic and spatial data.'
 ---
 
 Can we predict home sale prices in Philadelphia with enough accuracy to be useful for policy? This project builds a spatial hedonic regression model trained on real transaction data, incorporating not just property characteristics but the neighborhood context that shapes value in ways traditional models often miss.
