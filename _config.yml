@@ -1,5 +1,6 @@
 # Build settings
 
+baseurl: "/luciano_musa"
 port: 4000
 markdown:  kramdown
 permalink: /:title

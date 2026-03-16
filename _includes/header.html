@@ -23,7 +23,7 @@
       <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
     {% endfor %}
     {% if site.data.settings.resume %}
-      <a href="{{ site.data.settings.resume }}">{{ site.data.settings.resume_link_title }}</a>
+      <a href="{{ site.data.settings.resume | relative_url }}">{{ site.data.settings.resume_link_title }}</a>
     {% endif %}
   </nav>
 
