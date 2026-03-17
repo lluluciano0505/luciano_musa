@@ -12,7 +12,6 @@
   --header-size: 3.5rem;
   --header-z-index: 10;
 
-  font-family: 'Times New Roman', Times, serif;
   padding: 0;
   margin: 0;
 }
@@ -22,6 +21,18 @@ body {
   padding: 0;
   padding-top: var(--header-size);
   background-color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+header,
+nav a,
+.button,
+.project-label,
+.project-link-arrow,
+.blog-label,
+.page-title {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .site-container {
