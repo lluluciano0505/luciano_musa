@@ -22,8 +22,14 @@ body {
   padding-top: var(--header-size);
   background-color: black;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 17px;
   line-height: 1.65;
+}
+
+main p,
+main li,
+main blockquote,
+footer p {
+  font-size: 1.08rem;
 }
 
 h1, h2, h3, h4, h5, h6,
