@@ -1,95 +1,127 @@
+- city: London
+  region: United Kingdom
+  institution: University College London
+  role: BA Geography with Social Data Science
+  section: Education
+  category: Degree
+  period: 2022.09 - 2025.06
+  latitude: 51.5246
+  longitude: -0.1340
+  summary: Bachelor's training in geography, social data science, and computational methods for spatial analysis.
+  details:
+    - Upper Second-Class Honor (2:1).
+    - Relevant coursework in data analysis, geocomputation, cartography, and machine learning.
+  tags:
+    - Geography
+    - Social Data Science
+    - Geocomputation
+
+- city: Amsterdam
+  region: Netherlands
+  institution: University of Amsterdam
+  role: Erasmus Exchange in Geography and Planning
+  section: Education
+  category: Exchange
+  period: 2024.09 - 2024.12
+  latitude: 52.3559
+  longitude: 4.9550
+  summary: Exchange term focused on inequality, migration, and planning perspectives in European urban contexts.
+  details:
+    - Relevant coursework in migration and population dynamics.
+    - Relevant coursework in geography of inequality.
+  tags:
+    - Exchange
+    - Migration
+    - Planning
+
+- city: Philadelphia
+  region: United States
+  institution: University of Pennsylvania
+  role: MS Urban Spatial Analytics (MUSA)
+  section: Education
+  category: Graduate School
+  period: 2025.08 - 2026.05
+  latitude: 39.9526
+  longitude: -75.1932
+  summary: Graduate study combining spatial data science, machine learning, and urban systems analysis.
+  details:
+    - GPA 4.0/4.0.
+    - Relevant coursework in statistical and data mining methods, geospatial data science in Python, remote sensing, AI for urban sustainability, machine learning, and behavior and network analysis.
+  tags:
+    - MUSA
+    - Geospatial Data Science
+    - Urban Analytics
+
+- city: Philadelphia
+  region: United States
+  institution: University of Pennsylvania
+  role: Research Assistant
+  section: Experience
+  category: Research
+  period: 2026.02
+  latitude: 39.9526
+  longitude: -75.1932
+  summary: Built an AI-supported collection workflow for urban event intelligence from city and community web sources.
+  details:
+    - Used an AI agent based framework to scrape official city websites and event pages for upcoming urban events.
+    - Cleaned, structured, and archived the data into a continuously updateable urban events database in GitHub.
+  tags:
+    - AI Agents
+    - Web Data Collection
+    - Urban Events
+
+- city: Copenhagen
+  region: Denmark
+  institution: Henning Larsen
+  role: Operationalizing a Data Taxonomy for Architectural Practice
+  section: Experience
+  category: Research Practice
+  period: 2026.01
+  latitude: 55.6761
+  longitude: 12.5683
+  summary: Developed an AI-enabled architecture data taxonomy workflow for unstructured project information.
+  details:
+    - Designed an AI agent based architecture data classification system for large-scale unstructured files.
+    - Integrated multiple LLM and VLM models through OpenRouter with an API orchestration pipeline for natural language access.
+    - Benchmarked models including Claude 3.5 and GPT-4o for semantic parsing accuracy and cost efficiency.
+  tags:
+    - Data Taxonomy
+    - LLM Orchestration
+    - Benchmarking
+
+- city: Qingdao
+  region: China
+  institution: Hisense Cold Chain
+  role: Data Analysis Assistant
+  section: Experience
+  category: Industry
+  period: 2024.07 - 2024.08
+  latitude: 36.0671
+  longitude: 120.3826
+  summary: Supported commercial analytics, tender preparation, and sales operations with structured data workflows.
+  details:
+    - Extracted and analyzed customer feedback from WeChat channels and identified key concerns through keyword analysis.
+    - Organized and verified bid related cost data in Excel to support adjustable budget estimation.
+    - Assisted sales meetings through material preparation, data support, and presentation documentation.
+  tags:
+    - Data Analysis
+    - Excel
+    - Business Support
+
 - city: Hefei
   region: China
   institution: New Oriental
   role: IELTS Teaching Assistant
   section: Experience
   category: Teaching
+  period: 2023.07 - 2023.09
   latitude: 31.8206
   longitude: 117.2272
-  label_dx: 18
-  label_dy: 22
-  summary: Supported IELTS instruction and student preparation, which sharpened my communication skills and ability to explain complex ideas clearly.
+  summary: Supported IELTS teaching delivery and student preparation in speaking and vocabulary development.
+  details:
+    - Conducted IELTS speaking practice sessions with targeted feedback on fluency, pronunciation, and coherence.
+    - Administered vocabulary quizzes and graded IELTS exam papers with structured feedback.
   tags:
     - Teaching
     - Communication
-    - Student Support
-
-- city: Qingdao
-  region: China
-  institution: Hisense
-  role: Data Analysis Intern
-  section: Experience
-  category: Industry
-  latitude: 36.0671
-  longitude: 120.3826
-  label_dx: 18
-  label_dy: -10
-  summary: Cleaned, organized, and visualized sales data, building a practical foundation in analytics workflows and business-facing reporting.
-  tags:
-    - Data Cleaning
-    - Visualization
-    - Analytics
-
-- city: London
-  region: United Kingdom
-  institution: University College London
-  role: BA in Geography with Social Data Science
-  section: Education
-  category: Degree
-  latitude: 51.5246
-  longitude: -0.1340
-  label_dx: -18
-  label_dy: -18
-  summary: Built my grounding in spatial econometrics, cartography, and computational social science through a geography degree centered on data.
-  tags:
-    - Geography
-    - Social Data Science
-    - Spatial Analysis
-
-- city: Amsterdam
-  region: Netherlands
-  institution: University of Amsterdam
-  role: Exchange Study
-  section: Education
-  category: Exchange
-  latitude: 52.3559
-  longitude: 4.9550
-  label_dx: -18
-  label_dy: 24
-  summary: Expanded my perspective on migration, political geography, and the cultural dimensions of spatial data during my exchange period.
-  tags:
-    - Exchange
-    - Migration
-    - Political Geography
-
-- city: Philadelphia
-  region: United States
-  institution: University of Pennsylvania
-  role: MUSA at Penn
-  section: Education
-  category: Graduate School
-  latitude: 39.9526
-  longitude: -75.1932
-  label_dx: 18
-  label_dy: -14
-  summary: Deepened my work in mobility, urban equity, and spatial data science while connecting research methods to real urban systems.
-  tags:
-    - MUSA
-    - Mobility
-    - Urban Equity
-
-- city: Copenhagen
-  region: Denmark
-  institution: Henning Larsen
-  role: Taxonomy Project
-  section: Experience
-  category: Research Practice
-  latitude: 55.6761
-  longitude: 12.5683
-  label_dx: 18
-  label_dy: -34
-  summary: Contributed to a taxonomy and data-auditing effort for architectural and urban datasets, linking structured information to design workflows.
-  tags:
-    - Taxonomy
-    - Design Data
-    - Urban Datasets
+    - Assessment

@@ -19,33 +19,11 @@ permalink: /experience
 </section>
 
 <section class="experience-map-shell">
-  <div class="experience-map-header">
-    <div>
-      <h2>Mercator Projection</h2>
-      <p>
-        Each point is positioned from real latitude and longitude coordinates using a
-        Mercator projection. Instead of a route diagram, this view shows the geographic spread
-        of the places where I studied and worked.
-      </p>
-    </div>
-    <div class="experience-map-note">Experience Visualization</div>
-  </div>
+  <h2>Experience Map</h2>
 
   <div class="experience-map-frame">
-    <svg id="experience-map" class="experience-map" viewBox="0 0 1200 620" role="img" aria-labelledby="experience-map-title experience-map-desc">
-      <title id="experience-map-title">Global experience map</title>
-      <desc id="experience-map-desc">A Mercator-projected map showing Jingqi Lu's education and work experience across China, the United Kingdom, the Netherlands, the United States, and Denmark.</desc>
-      <rect width="1200" height="620" class="experience-map-ocean"></rect>
-      <g id="experience-map-land"></g>
-      <g id="experience-map-region-labels"></g>
-      <g id="experience-map-points"></g>
-    </svg>
+    <div id="experience-map" class="experience-map" role="img" aria-label="Map showing the cities where Jingqi Lu studied and worked"></div>
   </div>
-
-  <p class="experience-caption">
-    The projection spans East Asia, Western Europe, and the US East Coast, where the main parts
-    of my academic and professional experience took place.
-  </p>
 </section>
 
 {% assign education_items = site.data.experience | where: 'section', 'Education' %}
@@ -59,17 +37,20 @@ permalink: /experience
         <article class="experience-entry">
           <div class="experience-entry-meta">
             <div class="experience-entry-city">{{ item.city }}, {{ item.region }}</div>
+            <div class="experience-entry-period">{{ item.period }}</div>
             <div class="experience-entry-category">{{ item.category }}</div>
           </div>
           <div class="experience-entry-body">
             <h3>{{ item.institution }}</h3>
             <div class="experience-entry-role">{{ item.role }}</div>
             <p>{{ item.summary }}</p>
-            <div class="experience-tags">
-              {% for tag in item.tags %}
-                <span class="experience-tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
+            {% if item.details %}
+              <ul class="experience-details">
+                {% for detail in item.details %}
+                  <li>{{ detail }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </div>
         </article>
       {% endfor %}
@@ -83,17 +64,20 @@ permalink: /experience
         <article class="experience-entry">
           <div class="experience-entry-meta">
             <div class="experience-entry-city">{{ item.city }}, {{ item.region }}</div>
+            <div class="experience-entry-period">{{ item.period }}</div>
             <div class="experience-entry-category">{{ item.category }}</div>
           </div>
           <div class="experience-entry-body">
             <h3>{{ item.institution }}</h3>
             <div class="experience-entry-role">{{ item.role }}</div>
             <p>{{ item.summary }}</p>
-            <div class="experience-tags">
-              {% for tag in item.tags %}
-                <span class="experience-tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
+            {% if item.details %}
+              <ul class="experience-details">
+                {% for detail in item.details %}
+                  <li>{{ detail }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </div>
         </article>
       {% endfor %}
@@ -102,3 +86,5 @@ permalink: /experience
 </section>
 
 <script id="experience-data" type="application/json">{{ site.data.experience | jsonify }}</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

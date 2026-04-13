@@ -328,24 +328,25 @@ h2::after {
 }
 
 .experience-stat {
-  padding: 0.6rem 0.9rem;
-  background: white;
-  border-left: 3px solid var(--color-accent);
+  padding: 0;
+  background: transparent;
+  border-left: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.88rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
+  color: rgba(0, 0, 0, 0.68);
 }
 
 .experience-map-shell {
   margin-bottom: calc(var(--spacing) * 3);
-  padding: calc(var(--spacing) * 1.5);
-  background: linear-gradient(180deg, #f8f3eb 0%, #f3ece2 100%);
-  border-radius: 18px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
   color: #111;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  border: none;
+  box-shadow: none;
 }
 
 .experience-map-header {
@@ -374,18 +375,15 @@ h2::after {
 .experience-map-frame {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(255, 65, 0, 0.1), transparent 22%),
-    radial-gradient(circle at 82% 20%, rgba(255, 190, 92, 0.16), transparent 24%),
-    linear-gradient(180deg, #fcfbf8 0%, #efe6d9 100%);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: white;
 }
 
 .experience-map {
   display: block;
   width: 100%;
-  height: auto;
+  height: clamp(420px, 58vh, 620px);
 }
 
 .experience-map-ocean {
@@ -426,22 +424,28 @@ h2::after {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.75rem;
-  padding: 1.15rem 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .experience-entry-meta {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: baseline;
-  gap: 1rem;
+  gap: 0.15rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .experience-entry-city {
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #111;
+}
+
+.experience-entry-period {
+  font-size: 0.82rem;
+  color: rgba(0, 0, 0, 0.58);
+  letter-spacing: 0.03rem;
 }
 
 .experience-entry-category {
@@ -464,68 +468,17 @@ h2::after {
   font-weight: 700;
 }
 
-.experience-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+.experience-details {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
 }
 
-.experience-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.32rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(255, 65, 0, 0.1);
-  color: #111;
+.experience-details li {
+  margin-bottom: 0.25rem;
+}
+
+.leaflet-container {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-.experience-map-landmass {
-  fill: rgba(223, 202, 179, 0.62);
-  stroke: rgba(128, 107, 83, 0.12);
-  stroke-width: 1.5;
-}
-
-.experience-map-landmass.continent-europe {
-  fill: rgba(229, 212, 190, 0.82);
-}
-
-.experience-map-region-label {
-  fill: rgba(0, 0, 0, 0.32);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.12rem;
-  text-transform: uppercase;
-  text-anchor: middle;
-}
-
-.experience-map-point {
-  fill: var(--color-accent);
-  stroke: white;
-  stroke-width: 3;
-}
-
-.experience-map-ring {
-  fill: none;
-  stroke: rgba(255, 65, 0, 0.24);
-  stroke-width: 2;
-}
-
-.experience-map-label {
-  fill: #111;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.experience-map-label tspan:last-child {
-  fill: rgba(0, 0, 0, 0.56);
-  font-size: 11px;
-  font-weight: 400;
 }
 
 /* Project list on the home page */
@@ -632,6 +585,10 @@ h2::after {
     grid-template-columns: 220px 1fr;
     gap: 1.2rem;
   }
+
+  .experience-entry-meta {
+    gap: 0.35rem;
+  }
 }
 
 /* Project page */
@@ -700,17 +657,9 @@ post-container img {
     flex-direction: column;
   }
 
-  .experience-map-label {
-    font-size: 11px;
-  }
-
   .experience-entry-meta {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 0.2rem;
     align-items: flex-start;
-  }
-
-  .experience-map-label tspan:last-child {
-    font-size: 10px;
   }
 }
