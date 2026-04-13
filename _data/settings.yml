@@ -12,6 +12,7 @@ resume_link_title: View CV
 
 menu:
 - {name: 'Projects', url: ' '}
+- {name: 'Experience', url: 'experience'}
 - {name: 'Blog and Creation',     url: 'blog'}
 - {name: 'About',    url: 'about'}
 

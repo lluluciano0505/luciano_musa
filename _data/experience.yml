@@ -1,0 +1,77 @@
+- city: Hefei
+  region: China
+  institution: New Oriental
+  role: IELTS Teaching Assistant
+  category: Work
+  latitude: 31.8206
+  longitude: 117.2272
+  summary: Supported IELTS instruction and student preparation, which sharpened my communication skills and ability to explain complex ideas clearly.
+  tags:
+    - Teaching
+    - Communication
+    - Student Support
+
+- city: Qingdao
+  region: China
+  institution: Hisense
+  role: Data Analysis Intern
+  category: Work
+  latitude: 36.0671
+  longitude: 120.3826
+  summary: Cleaned, organized, and visualized sales data, building a practical foundation in analytics workflows and business-facing reporting.
+  tags:
+    - Data Cleaning
+    - Visualization
+    - Analytics
+
+- city: London
+  region: United Kingdom
+  institution: University College London
+  role: BA in Geography with Social Data Science
+  category: Education
+  latitude: 51.5246
+  longitude: -0.1340
+  summary: Built my grounding in spatial econometrics, cartography, and computational social science through a geography degree centered on data.
+  tags:
+    - Geography
+    - Social Data Science
+    - Spatial Analysis
+
+- city: Amsterdam
+  region: Netherlands
+  institution: University of Amsterdam
+  role: Exchange Study
+  category: Education
+  latitude: 52.3559
+  longitude: 4.9550
+  summary: Expanded my perspective on migration, political geography, and the cultural dimensions of spatial data during my exchange period.
+  tags:
+    - Exchange
+    - Migration
+    - Political Geography
+
+- city: Philadelphia
+  region: United States
+  institution: University of Pennsylvania
+  role: MUSA at Penn
+  category: Education
+  latitude: 39.9526
+  longitude: -75.1932
+  summary: Deepened my work in mobility, urban equity, and spatial data science while connecting research methods to real urban systems.
+  tags:
+    - MUSA
+    - Mobility
+    - Urban Equity
+
+- city: Copenhagen
+  region: Denmark
+  institution: Henning Larsen
+  role: Taxonomy Project
+  category: Practice
+  latitude: 55.6761
+  longitude: 12.5683
+  summary: Contributed to a taxonomy and data-auditing effort for architectural and urban datasets, linking structured information to design workflows.
+  tags:
+    - Taxonomy
+    - Design Data
+    - Urban Datasets
