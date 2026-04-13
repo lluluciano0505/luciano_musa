@@ -295,6 +295,21 @@ h2::after {
   border-radius: 50%;
 }
 
+.resume-viewer {
+  margin: 0 auto calc(var(--spacing) * 3);
+}
+
+.resume-frame {
+  width: 100%;
+  min-height: 75vh;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+.resume-fallback {
+  margin-top: var(--spacing);
+}
+
 /* Project list on the home page */
 
 .projects-container {
@@ -445,5 +460,9 @@ post-container img {
 @media screen and (min-width: 1024px) {
   header, main, footer {
     padding: 0 var(--wide-spacing);
+  }
+
+  .resume-frame {
+    min-height: 88vh;
   }
 }

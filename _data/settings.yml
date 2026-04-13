@@ -7,14 +7,13 @@ intro_title: Spatial Data Science & AI Solutions for Urban Complexity
 intro_text: MUSA @UPenn | Data Governance | AI Applications | Spatial Justice.
             I bridge the gap between messy urban data and smart design decisions. I build AI tools to organize unmanaged information and automate complex workflows for architects and urban planners.
   
-resume: '/assets/files/CV_Jingqi.pdf'
-resume_link_title: Download CV
+resume: '/resume'
+resume_link_title: View CV
 
 menu:
 - {name: 'Projects', url: ' '}
 - {name: 'Blog and Creation',     url: 'blog'}
 - {name: 'About',    url: 'about'}
-- {name: 'Contact',  url: 'contact'}
 
 #-------------------------------
 # Contact Section
