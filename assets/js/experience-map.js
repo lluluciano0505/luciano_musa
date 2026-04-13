@@ -2,15 +2,42 @@ const mapElement = document.querySelector('#experience-map');
 
 if (mapElement) {
   const dataElement = document.querySelector('#experience-data');
-  const gridElement = document.querySelector('#experience-map-grid');
-  const routeElement = document.querySelector('#experience-map-route');
+  const landElement = document.querySelector('#experience-map-land');
+  const regionLabelsElement = document.querySelector('#experience-map-region-labels');
   const pointsElement = document.querySelector('#experience-map-points');
 
-  if (dataElement && gridElement && routeElement && pointsElement) {
+  if (dataElement && landElement && regionLabelsElement && pointsElement) {
     const mapWidth = 1200;
     const mapHeight = 620;
     const maxLatitude = 80;
     const labels = JSON.parse(dataElement.textContent);
+    const landShapes = [
+      {
+        className: 'experience-map-landmass continent-asia',
+        points: [
+          [72, 12], [85, 8], [98, 10], [110, 16], [122, 24], [129, 36], [132, 46], [125, 56],
+          [116, 59], [101, 56], [90, 50], [82, 42], [76, 30], [72, 20],
+        ],
+      },
+      {
+        className: 'experience-map-landmass continent-europe',
+        points: [
+          [-10, 37], [-2, 41], [10, 44], [22, 48], [29, 56], [20, 62], [8, 60], [-3, 55], [-8, 48],
+        ],
+      },
+      {
+        className: 'experience-map-landmass continent-north-america',
+        points: [
+          [-130, 24], [-124, 34], [-118, 44], [-110, 52], [-96, 60], [-84, 56], [-72, 48],
+          [-66, 40], [-72, 30], [-84, 24], [-102, 20], [-118, 18],
+        ],
+      },
+    ];
+    const regionLabels = [
+      { name: 'East Asia', longitude: 112, latitude: 46 },
+      { name: 'Europe', longitude: 10, latitude: 60 },
+      { name: 'North America', longitude: -95, latitude: 55 },
+    ];
 
     const project = (longitude, latitude) => {
       const boundedLatitude = Math.max(Math.min(latitude, maxLatitude), -maxLatitude);
@@ -29,77 +56,67 @@ if (mapElement) {
       return node;
     };
 
-    for (let longitude = -150; longitude <= 150; longitude += 30) {
-      const start = project(longitude, -75);
-      const end = project(longitude, 75);
-      gridElement.appendChild(createSvgNode('line', {
-        x1: start.x,
-        y1: start.y,
-        x2: end.x,
-        y2: end.y,
-      }));
-    }
-
-    for (let latitude = -60; latitude <= 60; latitude += 20) {
-      const path = [];
-      for (let longitude = -180; longitude <= 180; longitude += 8) {
+    const polygonToPath = (points) => points
+      .map(([longitude, latitude], index) => {
         const point = project(longitude, latitude);
-        path.push(`${longitude === -180 ? 'M' : 'L'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`);
-      }
-      gridElement.appendChild(createSvgNode('path', { d: path.join(' ') }));
-    }
-
-    const routePath = labels
-      .map((item, index) => {
-        const point = project(item.longitude, item.latitude);
         return `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`;
       })
-      .join(' ');
+      .join(' ') + ' Z';
 
-    routeElement.setAttribute('d', routePath);
+    landShapes.forEach((shape) => {
+      landElement.appendChild(createSvgNode('path', {
+        class: shape.className,
+        d: polygonToPath(shape.points),
+      }));
+    });
 
-    labels.forEach((item, index) => {
+    regionLabels.forEach((region) => {
+      const point = project(region.longitude, region.latitude);
+      const label = createSvgNode('text', {
+        class: 'experience-map-region-label',
+        x: point.x,
+        y: point.y,
+      });
+      label.textContent = region.name;
+      regionLabelsElement.appendChild(label);
+    });
+
+    labels.forEach((item) => {
       const point = project(item.longitude, item.latitude);
-      const labelOffsetX = point.x < mapWidth * 0.45 ? 14 : -14;
+      const labelOffsetX = Number(item.label_dx || 16);
+      const labelOffsetY = Number(item.label_dy || -14);
       const labelAnchor = labelOffsetX > 0 ? 'start' : 'end';
-      const labelY = point.y - 12;
+      const labelX = point.x + labelOffsetX;
+      const labelY = point.y + labelOffsetY;
 
       pointsElement.appendChild(createSvgNode('circle', {
         class: 'experience-map-ring',
         cx: point.x,
         cy: point.y,
-        r: 16,
+        r: 18,
       }));
 
       pointsElement.appendChild(createSvgNode('circle', {
         class: 'experience-map-point',
         cx: point.x,
         cy: point.y,
-        r: 7,
+        r: 8,
       }));
 
       const label = createSvgNode('text', {
         class: 'experience-map-label',
-        x: point.x + labelOffsetX,
+        x: labelX,
         y: labelY,
         'text-anchor': labelAnchor,
       });
 
-      const lineOne = createSvgNode('tspan', { x: point.x + labelOffsetX, dy: '0' });
+      const lineOne = createSvgNode('tspan', { x: labelX, dy: '0' });
       lineOne.textContent = item.city;
-      const lineTwo = createSvgNode('tspan', { x: point.x + labelOffsetX, dy: '1.25em' });
+      const lineTwo = createSvgNode('tspan', { x: labelX, dy: '1.25em' });
       lineTwo.textContent = item.institution;
       label.appendChild(lineOne);
       label.appendChild(lineTwo);
       pointsElement.appendChild(label);
-
-      const indexBadge = createSvgNode('text', {
-        class: 'experience-map-index',
-        x: point.x,
-        y: point.y,
-      });
-      indexBadge.textContent = String(index + 1);
-      pointsElement.appendChild(indexBadge);
     });
   }
 }

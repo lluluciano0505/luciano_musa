@@ -24,7 +24,8 @@ permalink: /experience
       <h2>Mercator Projection</h2>
       <p>
         Each point is positioned from real latitude and longitude coordinates using a
-        Mercator projection, then connected as a route across study, work, and research contexts.
+        Mercator projection. Instead of a route diagram, this view shows the geographic spread
+        of the places where I studied and worked.
       </p>
     </div>
     <div class="experience-map-note">Experience Visualization</div>
@@ -34,33 +35,70 @@ permalink: /experience
     <svg id="experience-map" class="experience-map" viewBox="0 0 1200 620" role="img" aria-labelledby="experience-map-title experience-map-desc">
       <title id="experience-map-title">Global experience map</title>
       <desc id="experience-map-desc">A Mercator-projected map showing Jingqi Lu's education and work experience across China, the United Kingdom, the Netherlands, the United States, and Denmark.</desc>
-      <rect width="1200" height="620" fill="transparent"></rect>
-      <g class="experience-map-grid" id="experience-map-grid"></g>
-      <path class="experience-map-route" id="experience-map-route"></path>
+      <rect width="1200" height="620" class="experience-map-ocean"></rect>
+      <g id="experience-map-land"></g>
+      <g id="experience-map-region-labels"></g>
       <g id="experience-map-points"></g>
     </svg>
   </div>
 
   <p class="experience-caption">
-    The route starts in China, extends through London and Amsterdam, crosses to Philadelphia,
-    and reconnects with Copenhagen through current practice-oriented collaboration.
+    The projection spans East Asia, Western Europe, and the US East Coast, where the main parts
+    of my academic and professional experience took place.
   </p>
 </section>
 
-<section class="experience-grid">
-  {% for item in site.data.experience %}
-    <article class="experience-card">
-      <div class="experience-card-meta">{{ item.category }}</div>
-      <h3>{{ item.role }}</h3>
-      <div class="experience-card-location">{{ item.institution }} · {{ item.city }}, {{ item.region }}</div>
-      <p>{{ item.summary }}</p>
-      <div class="experience-tags">
-        {% for tag in item.tags %}
-          <span class="experience-tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    </article>
-  {% endfor %}
+{% assign education_items = site.data.experience | where: 'section', 'Education' %}
+{% assign experience_items = site.data.experience | where: 'section', 'Experience' %}
+
+<section class="experience-cv">
+  <div class="experience-section">
+    <div class="experience-section-label">Education</div>
+    <div class="experience-list">
+      {% for item in education_items %}
+        <article class="experience-entry">
+          <div class="experience-entry-meta">
+            <div class="experience-entry-city">{{ item.city }}, {{ item.region }}</div>
+            <div class="experience-entry-category">{{ item.category }}</div>
+          </div>
+          <div class="experience-entry-body">
+            <h3>{{ item.institution }}</h3>
+            <div class="experience-entry-role">{{ item.role }}</div>
+            <p>{{ item.summary }}</p>
+            <div class="experience-tags">
+              {% for tag in item.tags %}
+                <span class="experience-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="experience-section">
+    <div class="experience-section-label">Experience</div>
+    <div class="experience-list">
+      {% for item in experience_items %}
+        <article class="experience-entry">
+          <div class="experience-entry-meta">
+            <div class="experience-entry-city">{{ item.city }}, {{ item.region }}</div>
+            <div class="experience-entry-category">{{ item.category }}</div>
+          </div>
+          <div class="experience-entry-body">
+            <h3>{{ item.institution }}</h3>
+            <div class="experience-entry-role">{{ item.role }}</div>
+            <p>{{ item.summary }}</p>
+            <div class="experience-tags">
+              {% for tag in item.tags %}
+                <span class="experience-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 <script id="experience-data" type="application/json">{{ site.data.experience | jsonify }}</script>

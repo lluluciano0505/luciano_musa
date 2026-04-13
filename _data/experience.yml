@@ -2,9 +2,12 @@
   region: China
   institution: New Oriental
   role: IELTS Teaching Assistant
-  category: Work
+  section: Experience
+  category: Teaching
   latitude: 31.8206
   longitude: 117.2272
+  label_dx: 18
+  label_dy: 22
   summary: Supported IELTS instruction and student preparation, which sharpened my communication skills and ability to explain complex ideas clearly.
   tags:
     - Teaching
@@ -15,9 +18,12 @@
   region: China
   institution: Hisense
   role: Data Analysis Intern
-  category: Work
+  section: Experience
+  category: Industry
   latitude: 36.0671
   longitude: 120.3826
+  label_dx: 18
+  label_dy: -10
   summary: Cleaned, organized, and visualized sales data, building a practical foundation in analytics workflows and business-facing reporting.
   tags:
     - Data Cleaning
@@ -28,9 +34,12 @@
   region: United Kingdom
   institution: University College London
   role: BA in Geography with Social Data Science
-  category: Education
+  section: Education
+  category: Degree
   latitude: 51.5246
   longitude: -0.1340
+  label_dx: -18
+  label_dy: -18
   summary: Built my grounding in spatial econometrics, cartography, and computational social science through a geography degree centered on data.
   tags:
     - Geography
@@ -41,9 +50,12 @@
   region: Netherlands
   institution: University of Amsterdam
   role: Exchange Study
-  category: Education
+  section: Education
+  category: Exchange
   latitude: 52.3559
   longitude: 4.9550
+  label_dx: -18
+  label_dy: 24
   summary: Expanded my perspective on migration, political geography, and the cultural dimensions of spatial data during my exchange period.
   tags:
     - Exchange
@@ -54,9 +66,12 @@
   region: United States
   institution: University of Pennsylvania
   role: MUSA at Penn
-  category: Education
+  section: Education
+  category: Graduate School
   latitude: 39.9526
   longitude: -75.1932
+  label_dx: 18
+  label_dy: -14
   summary: Deepened my work in mobility, urban equity, and spatial data science while connecting research methods to real urban systems.
   tags:
     - MUSA
@@ -67,9 +82,12 @@
   region: Denmark
   institution: Henning Larsen
   role: Taxonomy Project
-  category: Practice
+  section: Experience
+  category: Research Practice
   latitude: 55.6761
   longitude: 12.5683
+  label_dx: 18
+  label_dy: -34
   summary: Contributed to a taxonomy and data-auditing effort for architectural and urban datasets, linking structured information to design workflows.
   tags:
     - Taxonomy
