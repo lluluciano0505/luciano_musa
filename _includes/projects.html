@@ -1,20 +1,28 @@
-<section class="projects-container">
-  <h2>Projects</h2>
-
+<div class="projects-grid">
   {% for project in site.projects %}
-    <a class="project-link" href="{{ project.url | relative_url }}">
-      <div class="project-thumbnail-wrapper">
-        <img class="project-thumbnail" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
-      </div>
-      <div class="project-card-body">
-        <div class="project-label">{{ project.title }}</div>
+    <a href="{{ project.url | relative_url }}" class="project-card">
+      {% if project.thumbnail %}
+        <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="project-image">
+      {% else %}
+        <div class="project-image"></div>
+      {% endif %}
+
+      <div class="project-content">
+        <h3 class="project-title">{{ project.title }}</h3>
         {% if project.tagline %}
-        <div class="project-tagline">{{ project.tagline }}</div>
+          <p class="project-description">{{ project.tagline }}</p>
         {% endif %}
-        <div class="project-link-arrow">
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </div>
+        {% if project.categories %}
+          <div class="project-tags">
+            {% for category in project.categories %}
+              <span class="project-tag">{{ category }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <span class="project-link">
+          View Project <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </span>
       </div>
     </a>
   {% endfor %}
-</section>
+</div>

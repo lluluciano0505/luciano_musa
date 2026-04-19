@@ -1,15 +1,25 @@
 <footer>
-  <div class="footer-wrap">
-    <div class="footer-tagline">
-      <p>{{ site.data.settings.footer }}</p>
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>About</h3>
+        <p>{{ site.data.settings.footer }}</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>{{ site.data.settings.social_label }}</h3>
+        <div class="social-links">
+          {% for item in site.data.settings.social %}
+            <a href="{{ item.link }}" target="_blank" class="social-icon" aria-label="{{ item.icon }}">
+              <i class="fa fa-{{ item.icon }}" aria-hidden="true"></i>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
     </div>
-    <div class="social-media">
-      <h2 class="social-media-label">{{ site.data.settings.social_label }}</h2>
-      <nav>
-        {% for item in site.data.settings.social %}
-          <a href="{{ item.link }}" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
-        {% endfor %}
-      </nav>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
     </div>
   </div>
 </footer>

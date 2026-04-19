@@ -2,6 +2,21 @@
 layout: page
 ---
 
+<style>
+  .headshot-wrapper {
+    margin: var(--spacing-xl) auto;
+    text-align: center;
+  }
+
+  .headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-border);
+  }
+</style>
+
 <div class="headshot-wrapper">
   {% if page.headshot %}
     <img class="headshot" src="{{ page.headshot | relative_url }}" alt="{{ page.title }}">
