@@ -2,16 +2,18 @@
 layout: post
 title: 'The Urban Asset Classifier'
 thumbnail: /assets/img/projects/proj-5/proj5.png
-tagline: 'An LLM-powered pipeline that classifies thousands of unstructured urban project files into structured, queryable archives — automatically.'
+tagline: 'Urban projects drown in unorganized files. This LLM pipeline classifies thousands of them into a structured, searchable archive — in minutes, for cents.'
 ---
 
-Urban projects generate thousands of files — CAD drawings, PDFs, shapefiles, spreadsheets — that end up in disorganized directories. DataTaxonomy is a four-layer pipeline that automates classification using rule-based extraction and LLMs.
+Architecture and planning projects generate thousands of files — CAD drawings, PDFs, shapefiles, spreadsheets — that pile up in directories no one has time to sort. DataTaxonomy automates the entire classification process using a four-layer pipeline combining rule-based extraction with LLM reasoning.
 
-**Layer 1** extracts raw metadata (filenames, content samples, CAD attributes). **Layer 2** passes it to an LLM for semantic classification of domain, phase, scale, and confidentiality. **Layer 3** flags sensitive assets and validates dates. **Layer 4** exposes a RAG engine for natural-language Q&A over the archive.
+**Layer 1** extracts raw metadata: filenames, content samples, CAD attributes. **Layer 2** passes that to an LLM (Gemini 2.0 Flash via OpenRouter) for semantic classification of domain, phase, scale, and confidentiality. **Layer 3** flags sensitive assets and validates dates. **Layer 4** exposes a RAG engine for natural-language Q&A over the full archive.
 
 {% include image.html url="https://github.com/lluluciano0505/DataTaxonomy" image="projects/proj-5/proj5.png" %}
 
-The semantic confidentiality classifier distinguishes "30% slope" (public) from "30% fee markup" (confidential) — context judgment that keyword matching can't do reliably. Estimated throughput: 1,000 files in ~10 minutes for ~$0.50, delivered through a Streamlit dashboard with Plotly visualizations.
+The semantic confidentiality classifier is where the system earns its keep: it distinguishes "30% slope" (public engineering data) from "30% fee markup" (confidential commercial terms) — the kind of context judgment that keyword matching cannot do reliably.
+
+Estimated throughput: **1,000 files in ~10 minutes for ~$0.50**, delivered through a Streamlit dashboard with Plotly visualizations.
 
 [View Repository →](https://github.com/lluluciano0505/DataTaxonomy)
 
