@@ -106,35 +106,41 @@ permalink: /experience
   var eduColor   = '#2d5f5f';
   var expColor   = '#3a5f7f';
 
-  function makeIcon(color) {
+  function makeIcon(color, label) {
     return L.divIcon({
       className: '',
-      html: '<div style="width:14px;height:14px;border-radius:50%;background:' + color + ';border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.3);"></div>',
-      iconSize: [14, 14],
-      iconAnchor: [7, 7],
-      popupAnchor: [0, -10]
+      html: '<div style="position:relative;">' +
+              '<div style="width:18px;height:18px;border-radius:50%;background:' + color + ';border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.25);"></div>' +
+              '<div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:10px;font-weight:500;color:#1a2a2a;background:rgba(255,255,255,0.85);padding:1px 5px;border-radius:3px;pointer-events:none;">' + label + '</div>' +
+            '</div>',
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+      popupAnchor: [0, -12]
     });
   }
 
+  var seen = {};
   var bounds = [];
 
   data.forEach(function (item) {
     if (item.latitude == null || item.longitude == null) return;
-    var latlng = [item.latitude, item.longitude];
+    var key = item.latitude + ',' + item.longitude;
+    var offset = seen[key] ? seen[key] * 0.4 : 0;
+    seen[key] = (seen[key] || 0) + 1;
+    var latlng = [item.latitude + offset, item.longitude + offset];
     var color  = item.section === 'Education' ? eduColor : expColor;
-    var marker = L.marker(latlng, { icon: makeIcon(color) });
+    var marker = L.marker(latlng, { icon: makeIcon(color, item.city) });
     marker.bindPopup(
-      '<strong>' + item.institution + '</strong>' +
-      '<em>' + item.role + '</em><br>' +
-      item.city + ', ' + item.region + '<br>' +
-      '<span style="color:#5a6a6a;font-size:0.75rem;">' + item.period + '</span>'
+      '<strong>' + item.institution + '</strong><br>' +
+      '<em style="color:#5a6a6a;">' + item.role + '</em><br>' +
+      '<span style="font-size:0.75rem;color:#5a6a6a;">' + item.city + ', ' + item.region + ' · ' + item.period + '</span>'
     );
     marker.addTo(map);
-    bounds.push(latlng);
+    bounds.push([item.latitude, item.longitude]);
   });
 
   if (bounds.length) {
-    map.fitBounds(bounds, { padding: [40, 40] });
+    map.fitBounds(bounds, { padding: [60, 60], maxZoom: 5 });
   }
 })();
 </script>
