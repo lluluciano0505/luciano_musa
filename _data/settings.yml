@@ -3,9 +3,11 @@
 
 logo: '/assets/img/musa-logo.png'
 
-intro_title: Spatial Data Science & AI Solutions for Urban Complexity
-intro_text: MUSA @UPenn | Data Governance | AI Applications | Spatial Justice.
-            I bridge the gap between messy urban data and smart design decisions. I build AI tools to organize unmanaged information and automate complex workflows for architects and urban planners.
+intro_title: Spatial data enthusiast | MUSA @ University of Pennsylvania (May 2026) | B.Sc. Geography, UCL
+intro_text: |
+  Passionate about agent-based modeling for transportation forecasting, disaster behavior simulation, and multimodal AI in geographic analysis.
+
+  Currently collaborating with Henning Larsen on an urban data taxonomy project, helping designers better access and leverage data in architectural practice. Previously at Hisense Cold Chain, supporting sales teams through data management and visualization.
   
 resume: '/resume'
 resume_link_title: View CV

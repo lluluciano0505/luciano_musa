@@ -10,7 +10,7 @@ layout: default
         <h1>{{ site.data.settings.intro_title }}</h1>
       {% endif %}
       {% if site.data.settings.intro_text %}
-        <p class="hero-subtitle">{{ site.data.settings.intro_text }}</p>
+        <div class="hero-subtitle">{{ site.data.settings.intro_text | markdownify }}</div>
       {% endif %}
       {% if site.data.settings.resume %}
         <a href="{{ site.data.settings.resume | relative_url }}" class="cta-button">
