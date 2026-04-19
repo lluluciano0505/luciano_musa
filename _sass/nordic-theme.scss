@@ -267,7 +267,7 @@ nav a {
 .hero {
   padding: var(--spacing-2xl) 0;
   background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-light) 100%);
-  min-height: 600px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,7 +276,7 @@ nav a {
   overflow: hidden;
 
   @media (max-width: 768px) {
-    min-height: 400px;
+    min-height: 280px;
     padding: var(--spacing-xl) 0;
   }
 
@@ -301,16 +301,26 @@ nav a {
 }
 
 .hero h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0;
   margin-bottom: var(--spacing-md);
   color: var(--color-text-primary);
 }
 
 .hero-subtitle {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-lg);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-relaxed);
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    margin-bottom: var(--spacing-sm);
+  }
 }
 
 .cta-button {
