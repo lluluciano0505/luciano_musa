@@ -1,20 +1,23 @@
 ---
 layout: post
-title: 'The Urban Asset Classifier'
-thumbnail: /assets/img/projects/proj-5/proj5.png
-tagline: 'Urban projects drown in unorganized files. This LLM pipeline classifies thousands of them into a structured, searchable archive — in minutes, for cents.'
+title: 'DataTaxonomy: AI Classification Pipeline for Architectural Project Archives'
+thumbnail: /assets/img/projects/proj-5/DataTaxonomy.png
+tagline: 'Design offices drown in files nobody can find. DataTaxonomy turns a raw archive into a structured, searchable metadata catalogue — automatically.'
+categories: [AI, LLM, Architecture, Data Infrastructure]
 ---
 
-Architecture and planning projects generate thousands of files — CAD drawings, PDFs, shapefiles, spreadsheets — that pile up in directories no one has time to sort. DataTaxonomy automates the entire classification process using a four-layer pipeline combining rule-based extraction with LLM reasoning.
+DataTaxonomy is an AI-powered classification pipeline built for architectural and urban design practices. It takes a raw project file archive — thousands of PDFs, drawings, spreadsheets, models, and images accumulated across years of work — and transforms it into a structured, searchable metadata catalogue.
 
-**Layer 1** extracts raw metadata: filenames, content samples, CAD attributes. **Layer 2** passes that to an LLM (Gemini 2.0 Flash via OpenRouter) for semantic classification of domain, phase, scale, and confidentiality. **Layer 3** flags sensitive assets and validates dates. **Layer 4** exposes a RAG engine for natural-language Q&A over the full archive.
+{% include image.html image="projects/proj-5/DataTaxonomy.png" %}
 
-{% include image.html url="https://github.com/lluluciano0505/DataTaxonomy" image="projects/proj-5/proj5.png" %}
+The core problem it solves is one every design office faces: project knowledge is buried. Files sit in folders organised by date or discipline, with names that made sense to whoever created them and to nobody else. When a new project starts, or a team inherits an archive mid-delivery, the cost of locating the right information is enormous. DataTaxonomy makes that knowledge legible.
 
-The semantic confidentiality classifier is where the system earns its keep: it distinguishes "30% slope" (public engineering data) from "30% fee markup" (confidential commercial terms) — the kind of context judgment that keyword matching cannot do reliably.
+**The pipeline runs in four layers.**
 
-Estimated throughput: **1,000 files in ~10 minutes for ~$0.50**, delivered through a Streamlit dashboard with Plotly visualizations.
+**Layer 1** extracts technical metadata and content from each file using format-specific readers and vision models. **Layer 2** uses a large language model to classify every file across seven taxonomy dimensions: domain, scale, lifecycle stage, asset type, information type, governance source, and confidentiality. **Layer 3** applies rule-based guards and risk triage, flagging files that need human review. **Layer 2.5** — the priority engine — assesses each file's decision relevance: how much would reading this file right now change what gets designed? It scores five dimensions (authority, scope, urgency, coverage, rawness) and produces a single priority score that surfaces the files most likely to influence live decisions.
 
-[View Repository →](https://github.com/lluluciano0505/DataTaxonomy)
+Results are written to a CSV and visualised in an HTML dashboard with scatter plots, radar charts, and a review queue. Configuration is handled through a six-step web wizard. No code editing required.
 
-**Tools:** Python 3.10+ · Streamlit · OpenRouter API (Gemini 2.0 Flash) · Plotly · pandas · concurrent.futures
+*This is a private practice collaboration — the repository is not publicly available.*
+
+**Tools:** Python · OpenRouter API · Vision Models · Streamlit · Plotly · pandas · concurrent.futures
