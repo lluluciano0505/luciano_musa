@@ -8,7 +8,7 @@ categories: [Remote Sensing, Deep Learning, Computer Vision]
 
 Satellite imagery sees what ground surveys can't — but turning pixels into meaning requires the right models. This portfolio applies computer vision and deep learning to two distinct Earth observation problems, using Sentinel-2 multispectral data as the shared foundation.
 
-{% include image.html url="https://tess-vu.github.io/vision-EO/" image="projects/proj-6/thumbnail.png" %}
+{% include image.html url="https://lluluciano0505.github.io/vision-EO/" image="projects/proj-6/thumbnail.png" %}
 
 **Part 1 — EuroSAT Land Cover Classification**
 
@@ -20,7 +20,7 @@ In January 2025, the Palisades fire devastated residential areas across Los Ange
 
 The result is a topographically-aware damage prediction pipeline that operationalizes satellite imagery for rapid post-disaster assessment, with implications for insurance triage, resource deployment, and long-term rebuilding planning.
 
-[View Full Project →](https://tess-vu.github.io/vision-EO/)
+[View Full Project →](https://lluluciano0505.github.io/vision-EO/)
 
 **Collaborators:** Tess Vu, Jingqi Lu, Ming Cao — UPenn MUSA 2026
 
