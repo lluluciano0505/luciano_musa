@@ -4,6 +4,7 @@ title: 'DataTaxonomy: AI Classification Pipeline for Architectural Project Archi
 thumbnail: /assets/img/projects/proj-5/DataTaxonomy.png
 tagline: 'Design offices drown in files nobody can find. DataTaxonomy turns a raw archive into a structured, searchable metadata catalogue — automatically.'
 categories: [AI, LLM, Architecture, Data Infrastructure]
+skills: [Python, OpenRouter API, Vision Models, Streamlit, Plotly, pandas, concurrent.futures]
 ---
 
 DataTaxonomy is an AI-powered classification pipeline built for architectural and urban design practices. It takes a raw project file archive — thousands of PDFs, drawings, spreadsheets, models, and images accumulated across years of work — and transforms it into a structured, searchable metadata catalogue.

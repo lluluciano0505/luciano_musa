@@ -3,6 +3,7 @@ layout: post
 title: 'LSTM Spatial Flow Prediction: Modeling Urban Mobility with Deep Learning'
 thumbnail: /assets/img/projects/proj-4/thumbnail.png
 tagline: 'A 2-layer LSTM that learns the rhythm of a city — predicting flow across 500m grid cells from 4 hours of movement history and 85 dimensions of urban context.'
+skills: [Python, PyTorch, DuckDB, pandas, numpy, matplotlib, Google Colab]
 ---
 
 Cities pulse in patterns. This project asks whether a neural network can learn them well enough to predict where people will move next.

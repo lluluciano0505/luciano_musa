@@ -9,6 +9,13 @@
 
       <div class="project-content">
         <h3 class="project-title">{{ project.title }}</h3>
+        {% if project.skills %}
+          <div class="project-skills" aria-label="Skills used">
+            {% for skill in project.skills limit: 5 %}
+              <span class="project-skill">{{ skill }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
         {% if project.tagline %}
           <p class="project-description">{{ project.tagline }}</p>
         {% endif %}

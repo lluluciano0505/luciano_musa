@@ -4,6 +4,7 @@ title: 'Vision × Earth Observation: Remote Sensing and Deep Learning on Satelli
 thumbnail: /assets/img/projects/proj-6/thumbnail.png
 tagline: 'From Sentinel-2 pixels to wildfire damage maps — applying CNNs and U-Net segmentation to satellite imagery to classify land cover and predict structural destruction.'
 categories: [Remote Sensing, Deep Learning, Computer Vision]
+skills: [Python, PyTorch, Google Earth Engine, STAC API, GeoPandas, scikit-learn, Sentinel-2]
 ---
 
 Satellite imagery sees what ground surveys can't — but turning pixels into meaning requires the right models. This portfolio applies computer vision and deep learning to two distinct Earth observation problems, using Sentinel-2 multispectral data as the shared foundation.

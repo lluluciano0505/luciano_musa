@@ -3,6 +3,7 @@ layout: post
 title: 'Geolife Daily Mobility: Reconstructing Urban Movement from GPS Trajectories'
 thumbnail: /assets/img/projects/proj-3/thumbnail.png
 tagline: '182 people. Years of GPS traces across Beijing. What does it take to go home — and when do people decide to keep exploring?'
+skills: [Python, pandas, geopandas, numpy, matplotlib, scipy, Quarto]
 ---
 
 The [Microsoft Geolife dataset](https://www.microsoft.com/en-us/research/publication/geolife-gps-trajectory-dataset-user-guide/) records GPS trajectories from 182 users across several years in Beijing — millions of location points that, with the right processing, become stories about how people actually move through cities.

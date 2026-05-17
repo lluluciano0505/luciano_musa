@@ -3,6 +3,7 @@ layout: post
 title: 'Philadelphia Housing Price Prediction Model'
 thumbnail: /assets/img/projects/proj-1/thumbnail.png
 tagline: 'A spatial hedonic regression model trained on 25,585 real transactions — exposing the geographic inequality baked into how Philadelphia prices and values homes.'
+skills: [R, tidyverse, sf, spdep, ggplot2]
 ---
 
 Philadelphia's housing market is deeply unequal — and this model makes that visible. Using 25,585 OPA property sales from 2023–2024, four progressively complex regression models were built, layering structural features, Census socioeconomics, spatial accessibility, and interaction terms.

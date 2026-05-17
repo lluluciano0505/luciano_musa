@@ -17,6 +17,16 @@ layout: default
         {{ page.date | date: "%Y" }}
       </time>
     {% endif %}
+    {% if page.skills %}
+      <section class="post-skills" aria-label="Skills used in this project">
+        <p class="post-skills-label">Skills Used</p>
+        <div class="post-skills-list">
+          {% for skill in page.skills %}
+            <span class="post-skill">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
     <div class="post-content">
       {{ content }}
     </div>

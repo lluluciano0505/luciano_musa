@@ -3,6 +3,7 @@ layout: post
 title: 'Philadelphia Fire Alarms Analysis'
 thumbnail: /assets/img/projects/proj-2/thumbnail.png
 tagline: '77% of Philadelphia fire incidents are false alarms. This model predicts which calls they are — so crews can respond smarter without compromising safety.'
+skills: [R, sf, tidyverse, spatstat, caret, ggplot2]
 ---
 
 False alarms make up 77% of all fire-related incidents in Philadelphia, pulling resources from real emergencies. This project builds a predictive model to flag high-probability false alarms before dispatch.
