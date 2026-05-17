@@ -3,13 +3,13 @@
 
 logo: '/assets/img/musa-logo.png'
 
-intro_title: Spatial Data Enthusiast | MUSA @ University of Pennsylvania
+intro_title: AI & Geospatial ML Engineer
 intro_text: |
-  B.Sc. Geography (UCL) | Expected graduation: May 2026.
+  I build AI agent systems and LLM-powered pipelines that turn unstructured data into structured, queryable knowledge.
 
-  Passionate about agent-based modeling for transportation forecasting, disaster behavior simulation, and multimodal AI in geographic analysis.
+  Currently leading an AI agent–based data classification system at Henning Larsen, integrating multiple LLMs and VLMs via OpenRouter to automate semantic parsing of large-scale architectural project files. Also building AI-driven urban event databases at UPenn using automated scraping agents.
 
-  Currently collaborating with Henning Larsen on an urban data taxonomy project, helping designers better access and leverage data in architectural practice. Previously at Hisense Cold Chain, supporting sales teams through data management and visualization.
+  Skilled in Python, LLM/VLM integration, agentic modeling, deep learning (CNN, Mask R-CNN, U-Net), and geospatial engineering. Open to AI/ML engineering roles in urban tech, data infrastructure, or applied AI.
   
 resume: '/resume'
 resume_link_title: View CV
